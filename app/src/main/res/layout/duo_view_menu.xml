@@ -1,0 +1,162 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utils.draw.DuoMenuView">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/duo_view_menu_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_orange"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:id="@+id/duo_view_menu_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/duo_view_menu_footer_layout"
+        android:layout_below="@+id/duo_view_menu_header_layout"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/duo_view_menu_options_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/duo_view_menu_footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profileBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_account"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="20dp"
+                android:text="@string/profile"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="35dp"
+                android:background="@color/default_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/orderBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_order"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="20dp"
+                android:text="@string/orders"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="35dp"
+                android:background="@color/default_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/offerBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_offer"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="20dp"
+                android:text="@string/offer_and_promo"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="35dp"
+                android:background="@color/default_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/privacyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_privacy"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="20dp"
+                android:text="@string/privacy_policy"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="35dp"
+                android:background="@color/default_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/securityBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_secure"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="20dp"
+                android:text="@string/security"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
